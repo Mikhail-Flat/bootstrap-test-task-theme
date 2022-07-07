@@ -8,6 +8,8 @@
 			$media_gallery_count = count( $media_gallery );
 			$rich_text = carbon_get_post_meta( get_the_ID(), 'crb_rich_text' );
 			$equipment = carbon_get_post_meta( get_the_ID(), 'crb_equipment' );
+			$manufacturer = carbon_get_post_meta( get_the_ID(), 'crb_manufacturer' );
+			$price = carbon_get_post_meta( get_the_ID(), 'crb_price' );
 
 			if( $media_gallery_count == 0 ){
 				echo wp_get_attachment_image( 38, 'medium', false, array( 'class' => 'card-img-top' ) );
@@ -66,7 +68,25 @@
 
 			<p class="mt-4 font-italic"><b>Комплектация:</b></p>
 			<div class="blog-post border-bottom">
-				<?php echo wpautop( equipment ); ?>
+				<?php echo wpautop( $equipment ); ?>
+			</div>
+
+			<?php } ?>
+
+			<?php if( !empty( $manufacturer ) ){ ?>
+
+			<p class="mt-4 font-italic"><b>Производитель:</b></p>
+			<div class="blog-post border-bottom">
+				<p><?php echo $manufacturer; ?></p>
+			</div>
+
+			<?php } ?>
+
+			<?php if( !empty( $price ) ){ ?>
+
+			<p class="mt-4 font-italic"><b>Цена:</b></p>
+			<div class="blog-post border-bottom">
+				<p><?php echo $price; ?></p>
 			</div>
 
 			<?php } ?>
