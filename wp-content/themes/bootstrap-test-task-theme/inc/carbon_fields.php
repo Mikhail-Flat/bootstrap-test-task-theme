@@ -22,7 +22,7 @@ function crb_attach_theme_options() {
 		->add_fields( array(
 			Field::make( 'text', 'crb_title', 'Название' ),
 			Field::make( 'rich_text', 'crb_rich_text', 'Описание' ),
-			Field::make( 'media_gallery', 'crb_image', 'Галерея' )
+			Field::make( 'media_gallery', 'crb_media_gallery', 'Галерея' )
 				->set_type( 'image' ),
 			Field::make( 'rich_text', 'crb_equipment', 'Комплектация' ),
 			Field::make( 'radio', 'crb_manufacturer', 'Производитель' )

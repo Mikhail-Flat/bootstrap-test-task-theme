@@ -1,9 +1,9 @@
-	<div class="navbar navbar-default navbar-fixed-bottom">
-		<div class="container">
-			<a href="<?php echo get_home_url(); ?>" class="navbar-btn btn-danger btn pull-left">Home</a>
-			<p class="navbar-text pull-right m-0">Footer text (c) <?php echo date('Y'); ?></p>
+	<footer class="text-center text-lg-start bg-light text-muted">
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© <?php echo date('Y'); ?> Copyright:
+			<a class="text-reset fw-bold" href="https://expample.com/">expample.com</a>
 		</div>
-	</div>
+	</footer>
 
 	<?php wp_footer(); ?>
 </body>
